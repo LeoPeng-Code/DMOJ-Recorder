@@ -1,29 +1,33 @@
 #include <bits/stdc++.h>
 using namespace std;
 
+struct Record {
+    string name;   // 题目名字
+    int attempts;  // 做了几次
+};
+
 int main()
 {
-    cout << "欢迎来到Leo的战绩记录器" << endl;
-    int num; // 存今天做几道题
-    string problem_name; // 存题目名字
-    vector<string> my_ac_list; // 存所有题目的超级数组
-    
+    int num = 0; // 存今天做几道题
+    vector<Record> my_records; // 存所有题目的超级数组
+    cout << "---欢迎来到Leo的战绩记录器 v2.0---" << endl;
     cout << "今天你打算记录几道 AC 的题？请输入数字: ";
     cin >> num;
     
     for (int i = 1;i<=num;i++)
     {
-        cout << "请输入第 " << i + 1 << " 道题的名字 (比如 J1): ";
-        cin >> problem_name;
-        my_ac_list.push_back(problem_name);
+        Record temp;
+        cout << endl << "请输入第 " << i  << " 道题的名字 (比如 J1): ";
+        cin >> temp.name;
+        cout << endl << "这道题你做了几次？: ";
+        cin >> temp.attempts;
+        my_records.push_back(temp);
     }
     
-    cout << "====== 战报 ======" << endl;
-    cout << "太牛了！你今天一共 AC 了 " << my_ac_list.size() << " 道题！" << endl;
+    cout << endl << "====== 战报 ======" << endl;
     
-    // 用熟悉的 auto 打印，这里的 p 就是个名字
-    for (auto p : my_ac_list) {
-        cout << "- " << p << endl; 
+    for (auto r : my_records) {
+        cout << "- 题目: " << r.name << " | 做了 " << r.attempts << " 次" << endl;
     }
     
     return 0;
