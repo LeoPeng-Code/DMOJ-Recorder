@@ -11,11 +11,11 @@ struct Record
 int main() 
 {
     vector<Record> my_records; // 存储记录的数组
-    int choice = 0; // 用来记录用户选的菜单数字
+    string choice = "0"; // 用来记录用户选的菜单数字
 
-    cout << "--- 欢迎来到 Leo 的战绩记录器 v4.0 ---" << endl;
+    cout << "--- 欢迎来到 Leo 的战绩记录器 v4.1 ---" << endl;
     
-    while (choice != 3) 
+    while (choice != "3") 
     {
         cout << endl << "--------------------" << endl;
         cout << "1. 添加新战绩" << endl;
@@ -25,7 +25,7 @@ int main()
         cin >> choice; 
 
         //选择一
-        if (choice == 1) 
+        if (choice == "1") 
         {
             Record temp;
             cout << "请输入题目的名字: ";
@@ -40,7 +40,7 @@ int main()
         }
 
         //选择二
-        else if (choice == 2) 
+        else if (choice == "2") 
         {
             cout << "\n====== 战报 ======" << endl;
             if (my_records.empty()) 
@@ -56,7 +56,7 @@ int main()
         }
 
         //选择三
-        else if (choice == 3)
+        else if (choice == "3")
         {
             cout << endl << "再见，下次再来记录吧";
         }
