@@ -11,7 +11,7 @@ int main()
 {
     int num = 0; // 存今天做几道题
     vector<Record> my_records; // 存所有题目的超级数组
-    cout << "---欢迎来到Leo的战绩记录器 v2.0---" << endl;
+    cout << "---欢迎来到Leo的战绩记录器 v3.0---" << endl;
     cout << "今天你打算记录几道 AC 的题？请输入数字: ";
     cin >> num;
     
