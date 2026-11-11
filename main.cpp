@@ -4,6 +4,7 @@ using namespace std;
 struct Record {
     string name;   // 题目名字
     int attempts;  // 做了几次
+    string AC_OR_NOT;
 };
 
 int main()
@@ -21,13 +22,16 @@ int main()
         cin >> temp.name;
         cout << endl << "这道题你做了几次？: ";
         cin >> temp.attempts;
+        cout << endl << "最终结果是 AC 还是 WA？: ";
+        cin >> temp.AC_OR_NOT; 
         my_records.push_back(temp);
     }
     
     cout << endl << "====== 战报 ======" << endl;
     
-    for (auto r : my_records) {
-        cout << "- 题目: " << r.name << " | 做了 " << r.attempts << " 次" << endl;
+    for (auto r : my_records) 
+    {
+        cout << "- 题目: " << r.name << " | 做了 " << r.attempts << " 次 | 结果: " << r.AC_OR_NOT << endl;
     }
     
     return 0;
